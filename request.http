@@ -1,0 +1,31 @@
+GET http://localhost:8080/demobankoperations/api/accounts/
+###
+POST http://localhost:8080/demobankoperations/api/accounts/
+Content-Type: application/json
+
+{
+  "accountNumber": "1234567890",
+  "accountType": "Savings",
+  "customerId": 1,
+  "initialBalance": 1000.0,
+  "active": true,
+  "transactions": [],
+  "creationTime": "2024-07-22T10:00:00",
+  "updateTime": null,
+  "deleteTime": null
+}
+
+###
+POST http://localhost:8080/demobankoperations/api/transactions/
+Content-Type: application/json
+
+{
+  "accountId": 1,
+  "transactionText": "Deposit",
+  "transactionType": "Credit",
+  "amount": 500.0,
+  "balance": 1500.0,
+  "transactionDate": "2024-07-22",
+  "creationTime": "2024-07-22T10:00:00",
+  "updateTime": null
+}
